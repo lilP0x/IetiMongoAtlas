@@ -22,7 +22,6 @@ public class AuthenticationController {
             Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword())
             );
-            // Aquí deberías generar el JWT y retornarlo
             String token = "jwt-token-placeholder";
             return new AuthResponseDto(token);
         } catch (AuthenticationException e) {
